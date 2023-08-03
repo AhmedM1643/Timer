@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans", "sans-serif";
+}
+
+:root {
+    --primary: #121212;
+    --secondary: #181818;
+    --white: white;
+    --white-2: #DDDD;
+    --black-1: #121212;
+    --black-2: #181818;
+}
+
+body {
+    background: var(--black-1);
+    color: var(--white);
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+    height: 20vh;
+    grid-area: "head";
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 1fr 20%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black-2);
+    margin: auto;
+    width: 90%;
+    border: 1px solid var(--black-2);
+    grid-area: "app";
+    height: 75vh;
+    position: relative;
+}
+
+.icon {
+    padding-right: 10px;
+}
+.title {
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+}
+
+#timer {
+    font-size: 48px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#config {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.timer-btn {
+    padding: 12px;
+    width: 200px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--primary);
+    border-width: 1px;
+    color: var(--primary);
+    background-color: var(--white);
+    outline: none;
+    transition-duration: 0.2s;
+
+}
+/* 
+.timer-btn:hover {
+    background-color: var(--primary);
+    color: white;
+
+} */
+
+nav {
+    width: 15%;
+    height: 100%;
+    align-self: flex-end;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav.right {
+    right: 0;
+}
+
+nav.left {
+    left: 0;
+}
+
+nav i {
+    margin: 10px 0;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.watermark {
+    position: absolute;
+    left: 30;
+    bottom: 30;
+    font-size: 12px;
+}
+
+.watermark i {
+    margin-right: 6px;
+}
+
+@media (max-width: 767px) {
+    .timer-btn {
+        width: 80px;
+        font-size: 12px;
+    }
+}
